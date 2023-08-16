@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="string1" /><input id="string2" /><button onclick="compare()">Click</button>
+    <script>
+      function a() {
+        let arr1 = document.getElementById("string1").value.split("");
+        let arr2 = document.getElementById("string2").value.split("");
+        if (arr1.length != arr2.length) return "Không giống nhau";
+        else {
+          for (var i = 0; i < arr1.length; i++) if (arr1[i] != arr2[i]) return "Không giống nhau";
+          return "Giống nhau";
+        }
+      }
+      function compare() {
+        console.log(a());
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="inp" /><button onclick="convert()">Click</button>
+    <script>
+      function convert() {
+        let arr = document.getElementById("inp").value.split("");
+        console.log(arr);
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] == "-") {
+            arr[i] = "_";
+          }
+        }
+        alert(arr.join(''));
+      }
+    </script>
+  </body>
+</html>
